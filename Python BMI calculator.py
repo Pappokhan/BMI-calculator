@@ -6,11 +6,9 @@ def calculate_bmi():
     bmi = weight / (height ** 2)
     bmi_label.config(text=f"Your BMI is: {bmi:.2f}")
 
-# Create a new Tkinter window
 root = tk.Tk()
 root.title("BMI Calculator")
 
-# Create labels and entry widgets for weight and height
 weight_label = tk.Label(root, text="Weight (kg):")
 weight_label.grid(row=0, column=0)
 weight_entry = tk.Entry(root)
@@ -21,11 +19,9 @@ height_label.grid(row=1, column=0)
 height_entry = tk.Entry(root)
 height_entry.grid(row=1, column=1)
 
-# Create a button to calculate BMI
 calculate_button = tk.Button(root, text="Calculate", command=calculate_bmi)
 calculate_button.grid(row=2, column=0, columnspan=2, pady=10)
 
-# Create a label to display the BMI
 bmi_label = tk.Label(root, text="")
 bmi_label.grid(row=3, column=0, columnspan=2)
 
